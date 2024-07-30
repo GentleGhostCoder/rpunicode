@@ -1,0 +1,12 @@
+@echo off
+REM Check for ICU libraries (Adjust the path according to where ICU is typically installed)
+
+IF EXIST "C:\path\to\ICU\lib\icuuc.lib" (
+    ECHO ICU libraries found.
+) ELSE (
+    ECHO ERROR: ICU libraries not found.
+    ECHO Please install the ICU package before installing this package.
+    ECHO For more details on installing ICU, refer to: https://icu.unicode.org/
+    ECHO Note: Ensure you have the necessary runtime libraries installed.
+    EXIT /B 1
+)

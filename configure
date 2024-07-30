@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Check for ICU
+echo "Checking for ICU libraries..."
+if pkg-config --exists icu-uc icu-io icu-i18n; then
+    echo "ICU libraries found."
+else
+    echo "ERROR: ICU libraries not found."
+    echo "Please install the ICU package before installing this package."
+    echo "For more details on installing ICU, refer to: https://icu.unicode.org/"
+    echo "On Debian/Ubuntu, you can install ICU with: sudo apt-get install libicu[version]"
+    echo "On Fedora, use: sudo dnf install libicu"
+    echo "On macOS, use: brew install icu4c"
+    echo "Note: Ensure you have the necessary runtime libraries installed."
+    exit 1
+fi

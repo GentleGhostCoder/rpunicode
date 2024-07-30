@@ -1,0 +1,3 @@
+exportPattern("^[[:alpha:]]+")
+useDynLib(punycode, .registration=TRUE)
+importFrom(Rcpp, evalCpp)
